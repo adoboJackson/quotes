@@ -1,8 +1,8 @@
 <?php
 /*
-  Plugin Name: Nivo Plugin
-  Description: Simple implementation of a nivo slideshow into wordpress
-  Author: Ciprian Turcu
+  Plugin Name: Quotes Plugin
+  Description: Simple Quotes and Testimonials Plugin and Widget for Goseso Site
+  Author: Neil Bernardo
   Version: 1.0
  */
 
