@@ -1,0 +1,1 @@
+This is a plug in for quotes on the Goseso site
