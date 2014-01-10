@@ -68,8 +68,8 @@ function quotes_widgets_init() {
 
 function quotes_function($type='quotes_function') {
     $args = array('post_type' => 'quotes_images', 'posts_per_page' => 5);
-    $result = '<div class="slider-wrapper theme-default">';
-    $result .= '<div id="slider" class="quotes-panel">';
+    $result = '<div class="quotes-wrapper">';
+    $result .= '<div id="quotes" class="quotes-panel">';
     //the loop
     $loop = new WP_Query($args);
     while ($loop->have_posts()) {
@@ -77,12 +77,13 @@ function quotes_function($type='quotes_function') {
 
         $the_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $type);
 
-        $result .='<img title="'.get_the_title().'" src="' . $the_url[0] . '" data-thumb="' . $the_url[0] . '" alt=""/>';
+        $result .='<div class="single-quote"><img title="'.get_the_title().'" src="' . $the_url[0] . '" data-thumb="' . $the_url[0] . '" alt=""/><p>'.get_the_title().'</p></div>';
     }
     $result .= '</div>';
+    /*
     $result .='<div id = "htmlcaption" class = "quotes-html-caption">';
     $result .='<strong>This</strong> is an example of a <em>HTML</em> caption with <a href = "#">a link</a>.';
-    $result .='</div>';
+    $result .='</div>'; */
     $result .='</div>';
     return $result;
 }

@@ -1,3 +1,3 @@
 jQuery(document).ready(function($) {
-    $('#slider').nivoSlider();
+    /*$('#slider').nivoSlider();*/
     });
